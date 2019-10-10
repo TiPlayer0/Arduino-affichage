@@ -1,3 +1,4 @@
+/* Made by PandaCrp*/
 #include <Wire.h>
 #include "rgb_lcd.h"
 
@@ -7,16 +8,21 @@ const int colorR = 0;
 const int colorG = 0;
 const int colorB = 255;
 
-void setup() 
+void setup()
 {
 lcd.begin(16, 2);
 }
 
-void loop() 
+void loop()
 {
 //Mode nuit (pour voir dans le noir)
 if (digitalRead(0) = HIGH) {
 night = 4; //afficher un cycle de 4 données)
+}
+if (night != 0) {
+  lcd.setRGB(0, 0, 255);
+} else {
+  lcd.setRGB(0, 0, 0);
 }
 
 //Affichage des variable:
